@@ -29,7 +29,7 @@ KCM.SimpleKCM {
         });
         client.callJson("GetState", [], s => {
             hooksLabel.text = s.monitor.hooks ? i18n("Claude Code hooks are active: questions and permissions are reported exactly.") : i18n("No hook events received yet. Install the hooks for exact questions, permissions and errors: klaude-monitor hooks install");
-            versionLabel.text = i18n("Monitor %1 · %2 accounts · %3 sessions", s.monitor.version, s.accounts.length, s.counts.total);
+            versionLabel.text = [i18n("Monitor %1", s.monitor.version), i18np("%1 account", "%1 accounts", s.accounts.length), i18np("%1 session", "%1 sessions", s.counts.total)].join(" · ");
         }, null);
     }
 

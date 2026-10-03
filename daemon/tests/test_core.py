@@ -104,6 +104,13 @@ class StateMachine(Base):
         self.assertEqual(s.waiting["text"], "Bash: rm x")
         self.assertEqual(s.source, "hook")
 
+    def test_better_detail_updates_notification(self):
+        s = self.feed("waiting", waiting="permission")
+        self.m.apply_hook(hook("PermissionRequest", self.clock() + 100, tool_name="Bash",
+                               tool_input={"command": "make deploy"}))
+        self.assertEqual(s.waiting["text"], "Bash: make deploy")
+        self.assertEqual(self.notes, ["needs_input", "needs_input"])
+
     def test_lost_process_is_unknown_not_completed(self):
         s = self.feed("busy")
         self.m.process_gone(s)

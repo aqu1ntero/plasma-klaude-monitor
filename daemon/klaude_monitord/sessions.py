@@ -198,7 +198,11 @@ class Manager:
             if RANK[CERTAINTY.get(source, "low")] >= RANK[s.certainty]:
                 s.source = source
             if state == NEEDS_INPUT and detail:
+                before = (s.waiting or {}).get("text")
                 s.waiting = {**(s.waiting or {}), **{k: v for k, v in detail.items() if v}}
+                if s.waiting.get("text") and s.waiting["text"] != before:
+                    # More precise than what was notified: update the same notification.
+                    self.notify("needs_input", s, s.waiting)
                 self.touch()
             return True
         s.state = state

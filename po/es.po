@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-klaude-monitor\n"
 "Report-Msgid-Bugs-To: https://github.com/aqu1ntero/plasma-klaude-monitor/"
 "issues\n"
-"POT-Creation-Date: 2026-10-03 13:08-0400\n"
+"POT-Creation-Date: 2026-10-03 13:29-0400\n"
 "PO-Revision-Date: 2026-10-03 13:00-0400\n"
 "Last-Translator: Adrian Quintero <adrianquintero86@gmail.com>\n"
 "Language-Team: Spanish\n"
@@ -744,8 +744,20 @@ msgstr ""
 "permisos y errores exactos: klaude-monitor hooks install"
 
 #: shared/qml/MonitorConfigPage.qml:32
-msgid "Monitor %1 · %2 accounts · %3 sessions"
-msgstr "Monitor %1 · %2 cuentas · %3 sesiones"
+msgid "Monitor %1"
+msgstr "Monitor %1, %2"
+
+#: shared/qml/MonitorConfigPage.qml:32
+msgid "%1 account"
+msgid_plural "%1 accounts"
+msgstr[0] "%1 cuenta"
+msgstr[1] "%1 cuentas"
+
+#: shared/qml/MonitorConfigPage.qml:32
+msgid "%1 session"
+msgid_plural "%1 sessions"
+msgstr[0] "%1 sesión"
+msgstr[1] "%1 sesiones"
 
 #: shared/qml/MonitorConfigPage.qml:70
 msgid "The monitor service is not reachable: %1"
@@ -900,6 +912,9 @@ msgstr "Marcar el error como revisado"
 #: shared/qml/SessionRow.qml:133
 msgid "Resume in a new terminal"
 msgstr "Reanudar en una terminal nueva"
+
+#~ msgid "Monitor %1 · %2 accounts · %3 sessions"
+#~ msgstr "Monitor %1 · %2 cuentas · %3 sesiones"
 
 #~ msgid "%1 for %2"
 #~ msgstr "%1 desde %2"

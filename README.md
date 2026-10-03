@@ -6,6 +6,12 @@ including Yakuake, Konsole and kitty.
 
 ![Desktop dashboard](docs/images/dashboard.png)
 
+<p align="center">
+  <img src="docs/images/panel-in-context.png" alt="Panel widget popup opened from the panel" width="48%">
+  &nbsp;
+  <img src="docs/images/notifications.png" alt="Desktop notifications with the exact question and permission" width="30%">
+</p>
+
 Klaude Monitor has two widgets that show the same data from one shared background service:
 
 | | Panel widget | Desktop dashboard |
@@ -98,7 +104,27 @@ Or step by step:
 ./install.sh status
 ```
 
-Then right-click the panel or the desktop → **Add Widgets…** → search **Klaude**.
+![Running the installer](docs/images/install.png)
+
+### Step by step
+
+1. **Install** with one of the commands above. `klaude-monitor doctor` checks that the service answers and the
+   hooks are in place.
+2. **Add the widgets.** Right-click the panel or the desktop → **Add Widgets…** → search **Klaude**. Both widgets
+   are listed:
+
+   ![Add Widgets with the two Klaude Monitor widgets](docs/images/add-widgets.png)
+
+3. **Panel:** drag **Klaude Monitor** onto a panel (horizontal or vertical). The icon shows a red badge with the
+   sessions that need you and a blue one with the tasks in progress:
+
+   ![Panel icon](docs/images/panel-icon.png)
+
+4. **Desktop:** drag **Klaude Monitor Dashboard** onto the desktop and resize it as you like:
+
+   ![Dashboard on the desktop](docs/images/desktop-widget.png)
+
+5. **Configure** (optional): right-click a widget → **Configure…**. See [Settings](#settings).
 
 ### Install, activate, remove
 
@@ -123,9 +149,11 @@ These are three different things:
 
 ### Panel widget
 
-![Panel icon with two sessions needing you and two working](docs/images/panel-icon.png)
-&nbsp;&nbsp;
-![Panel popup](docs/images/panel.png)
+<p>
+  <img src="docs/images/panel.png" alt="Panel popup" width="45%">
+  &nbsp;
+  <img src="docs/images/panel-es.png" alt="Panel popup in Spanish" width="45%">
+</p>
 
 - **Red badge**: sessions that need you. **Blue badge**: tasks in progress. **Amber dot**: errors to review.
 - The icon pulses when a session starts needing you and flashes green when a task finishes (configurable).
@@ -151,6 +179,16 @@ These are three different things:
   detected late are marked.
 - Resizable: two columns when wide, tabs when narrow.
 
+<img src="docs/images/dashboard-narrow.png" alt="Narrow dashboard with tabs" width="40%">
+
+### Notifications
+
+The service sends a single notification per event (never one per widget): when a session needs you, with the
+question or the exact permission; when a task finishes (if it took longer than a threshold); and on errors.
+**Open terminal** jumps to the session.
+
+![Notifications](docs/images/notifications.png)
+
 ### Settings
 
 Each widget has two pages:
@@ -161,6 +199,13 @@ Each widget has two pages:
   recently completed, how long ended sessions stay listed, notifications, and the terminal used to resume sessions.
   These live in the service (`~/.config/klaude-monitor/config.json`), so changing them in one widget changes them for
   both.
+
+<p>
+  <img src="docs/images/settings-panel.png" alt="Panel widget appearance settings" width="49%">
+  <img src="docs/images/settings-desktop.png" alt="Desktop widget appearance settings" width="49%">
+</p>
+
+![Shared monitor settings](docs/images/settings-monitor.png)
 
 Both widgets follow the Plasma theme, colors and fonts.
 

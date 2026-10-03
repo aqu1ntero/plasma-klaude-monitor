@@ -14,7 +14,7 @@ import threading
 
 from gi.repository import Gio, GLib
 
-from . import BUS_NAME, INTERFACE, OBJECT_PATH, __version__, config, procutil, terminals, transcript
+from . import BUS_NAME, INTERFACE, OBJECT_PATH, __version__, config, hooks, procutil, terminals, transcript
 from .history import History, now_ms
 from .notify import Notifier
 from .sessions import ACTIVE, ENDED, Manager
@@ -93,6 +93,8 @@ class Monitor:
         self.started_at = now_ms()
         self.last_scan = None
         self.hooks_seen = False
+        self.hooks_installed = False
+        self.hooks_checked = 0
         self.loop = GLib.MainLoop()
 
     # ---- startup -----------------------------------------------------------------------------
@@ -191,6 +193,12 @@ class Monitor:
         if changed:
             self.history.set_meta("accounts", sorted(self.accounts))
         self._watch(str(config.SPOOL_DIR))
+        if changed or now_ms() - self.hooks_checked > 60000:
+            self.hooks_checked = now_ms()
+            installed = any(hooks.status(d) for d in self.accounts)
+            if installed != self.hooks_installed:
+                self.hooks_installed = installed
+                self.manager.touch()
 
     def _watch(self, path):
         if path in self.monitors or not os.path.isdir(path):
@@ -366,7 +374,7 @@ class Monitor:
 
     # ---- D-Bus -------------------------------------------------------------------------------
     def state_json(self):
-        hooks = self.hooks_seen or any(s.hooked for s in self.manager.sessions.values())
+        hooks = self.hooks_installed or self.hooks_seen or any(s.hooked for s in self.manager.sessions.values())
         extra = {
             "token": self.token(),
             "monitor": {

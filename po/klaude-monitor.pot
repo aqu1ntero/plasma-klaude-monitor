@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-klaude-monitor\n"
 "Report-Msgid-Bugs-To: https://github.com/aqu1ntero/plasma-klaude-monitor/"
 "issues\n"
-"POT-Creation-Date: 2026-10-03 13:50-0400\n"
+"POT-Creation-Date: 2026-10-03 18:48-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,17 +30,17 @@ msgid "Monitor"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:29
-#: plasmoids/panel/contents/ui/configGeneral.qml:53
+#: plasmoids/panel/contents/ui/configGeneral.qml:82
 msgid "Density:"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:35
-#: plasmoids/panel/contents/ui/configGeneral.qml:59
+#: plasmoids/panel/contents/ui/configGeneral.qml:88
 msgid "Compact"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:39
-#: plasmoids/panel/contents/ui/configGeneral.qml:63
+#: plasmoids/panel/contents/ui/configGeneral.qml:92
 msgid "Normal"
 msgstr ""
 
@@ -70,35 +70,35 @@ msgid "Activity history"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:73
-#: plasmoids/panel/contents/ui/configGeneral.qml:70
+#: plasmoids/panel/contents/ui/configGeneral.qml:99
 msgid "Default filter:"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:79
-#: plasmoids/panel/contents/ui/configGeneral.qml:76
+#: plasmoids/panel/contents/ui/configGeneral.qml:105
 #: plasmoids/panel/contents/ui/FullRepresentation.qml:131
 msgid "All"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:83
 #: plasmoids/desktop/contents/ui/Dashboard.qml:324
-#: plasmoids/panel/contents/ui/configGeneral.qml:80
+#: plasmoids/panel/contents/ui/configGeneral.qml:109
 #: plasmoids/panel/contents/ui/FullRepresentation.qml:135
 msgid "Active"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:87
-#: plasmoids/panel/contents/ui/configGeneral.qml:84 shared/qml/Labels.qml:13
+#: plasmoids/panel/contents/ui/configGeneral.qml:113 shared/qml/Labels.qml:13
 msgid "Needs you"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:91
-#: plasmoids/panel/contents/ui/configGeneral.qml:88 shared/qml/Labels.qml:15
+#: plasmoids/panel/contents/ui/configGeneral.qml:117 shared/qml/Labels.qml:15
 msgid "Working"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:95
-#: plasmoids/panel/contents/ui/configGeneral.qml:92 shared/qml/Labels.qml:21
+#: plasmoids/panel/contents/ui/configGeneral.qml:121 shared/qml/Labels.qml:21
 #: shared/qml/Labels.qml:191
 msgid "Error"
 msgstr ""
@@ -109,25 +109,25 @@ msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:108
 #: plasmoids/desktop/contents/ui/Dashboard.qml:369
-#: plasmoids/panel/contents/ui/configGeneral.qml:110
+#: plasmoids/panel/contents/ui/configGeneral.qml:139
 msgid "Recent activity"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:112
 #: plasmoids/desktop/contents/ui/Dashboard.qml:373
-#: plasmoids/panel/contents/ui/configGeneral.qml:114
+#: plasmoids/panel/contents/ui/configGeneral.qml:143
 msgid "Last state change"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:116
 #: plasmoids/desktop/contents/ui/Dashboard.qml:377
-#: plasmoids/panel/contents/ui/configGeneral.qml:118
+#: plasmoids/panel/contents/ui/configGeneral.qml:147
 msgid "Project"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:120
 #: plasmoids/desktop/contents/ui/Dashboard.qml:381
-#: plasmoids/panel/contents/ui/configGeneral.qml:122
+#: plasmoids/panel/contents/ui/configGeneral.qml:151
 msgid "State"
 msgstr ""
 
@@ -136,27 +136,28 @@ msgid "Group by state"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:131
-#: plasmoids/panel/contents/ui/configGeneral.qml:129
+#: plasmoids/panel/contents/ui/configGeneral.qml:158
 msgid "Sessions waiting for you always stay on top."
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:137
-#: plasmoids/panel/contents/ui/configGeneral.qml:140
+#: plasmoids/panel/contents/ui/configGeneral.qml:52
+#: plasmoids/panel/contents/ui/configGeneral.qml:169
 msgid "Show:"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:138
-#: plasmoids/panel/contents/ui/configGeneral.qml:141
+#: plasmoids/panel/contents/ui/configGeneral.qml:170
 msgid "Recently completed sessions"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:142
-#: plasmoids/panel/contents/ui/configGeneral.qml:145
+#: plasmoids/panel/contents/ui/configGeneral.qml:174
 msgid "Idle sessions"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:146
-#: plasmoids/panel/contents/ui/configGeneral.qml:149
+#: plasmoids/panel/contents/ui/configGeneral.qml:178
 msgid "Ended sessions"
 msgstr ""
 
@@ -169,12 +170,12 @@ msgid "Session identifier"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:158
-#: plasmoids/panel/contents/ui/configGeneral.qml:153
+#: plasmoids/panel/contents/ui/configGeneral.qml:182
 msgid "Hidden projects:"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:159
-#: plasmoids/panel/contents/ui/configGeneral.qml:154
+#: plasmoids/panel/contents/ui/configGeneral.qml:183
 msgid "comma-separated folder names"
 msgstr ""
 
@@ -205,6 +206,7 @@ msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:189
 #: plasmoids/desktop/contents/ui/Dashboard.qml:182
+#: plasmoids/panel/contents/ui/configGeneral.qml:57
 #: shared/qml/HistoryView.qml:112 shared/qml/Labels.qml:38
 msgid "Errors"
 msgstr ""
@@ -224,7 +226,7 @@ msgid "Tips:"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:209
-#: plasmoids/panel/contents/ui/configGeneral.qml:166
+#: plasmoids/panel/contents/ui/configGeneral.qml:195
 msgid "Hide the tip about Claude Code hooks"
 msgstr ""
 
@@ -393,51 +395,67 @@ msgstr ""
 msgid "Could not focus the terminal: %1"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/configGeneral.qml:28
-msgid "Panel icon:"
-msgstr ""
-
 #: plasmoids/panel/contents/ui/configGeneral.qml:29
-msgid "Show the number of tasks in progress"
+msgid "Panel icon style:"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/configGeneral.qml:33
-msgid "Show a dot when there are errors"
+#: plasmoids/panel/contents/ui/configGeneral.qml:35
+msgid "Icon with counters next to it"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/configGeneral.qml:37
-msgid "Show counts as text next to the icon (horizontal panels)"
+#: plasmoids/panel/contents/ui/configGeneral.qml:39
+msgid "Icon with small badges"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/configGeneral.qml:41
+#: plasmoids/panel/contents/ui/configGeneral.qml:46
+msgid "Vertical panels always use badges."
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:53
+msgid "Number of tasks in progress"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:61
+msgid "Effects:"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:62
+msgid "Red halo while a session needs me"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:66
 msgid "Pulse when a session needs me"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/configGeneral.qml:45
+#: plasmoids/panel/contents/ui/configGeneral.qml:70
+msgid "Spinning ring while tasks are in progress"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:74
 msgid "Flash when a task finishes"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/configGeneral.qml:50
+#: plasmoids/panel/contents/ui/configGeneral.qml:79
 msgid "Popup"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/configGeneral.qml:100
+#: plasmoids/panel/contents/ui/configGeneral.qml:129
 msgid "Order:"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/configGeneral.qml:101
+#: plasmoids/panel/contents/ui/configGeneral.qml:130
 msgid "Group by priority"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/configGeneral.qml:104
+#: plasmoids/panel/contents/ui/configGeneral.qml:133
 msgid "Sort within groups by:"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/configGeneral.qml:136
+#: plasmoids/panel/contents/ui/configGeneral.qml:165
 msgid "Visibility"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/configGeneral.qml:159
+#: plasmoids/panel/contents/ui/configGeneral.qml:188
 msgid "History entries:"
 msgstr ""
 

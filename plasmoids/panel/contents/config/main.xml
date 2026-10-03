@@ -6,7 +6,9 @@
   <group name="General">
     <entry name="showWorkingCount" type="Bool"><default>true</default></entry>
     <entry name="showErrorDot" type="Bool"><default>true</default></entry>
-    <entry name="showCountText" type="Bool"><default>false</default></entry>
+    <entry name="compactStyle" type="String"><default>pills</default></entry>
+    <entry name="glowOnAttention" type="Bool"><default>true</default></entry>
+    <entry name="animateWorking" type="Bool"><default>true</default></entry>
     <entry name="pulseOnAttention" type="Bool"><default>true</default></entry>
     <entry name="flashOnFinish" type="Bool"><default>true</default></entry>
     <entry name="density" type="String"><default>normal</default></entry>

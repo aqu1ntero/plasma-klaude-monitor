@@ -8,7 +8,9 @@ import org.kde.kirigami as Kirigami
 KCM.SimpleKCM {
     property alias cfg_showWorkingCount: showWorkingCount.checked
     property alias cfg_showErrorDot: showErrorDot.checked
-    property alias cfg_showCountText: showCountText.checked
+    property string cfg_compactStyle
+    property alias cfg_glowOnAttention: glowOnAttention.checked
+    property alias cfg_animateWorking: animateWorking.checked
     property alias cfg_pulseOnAttention: pulseOnAttention.checked
     property alias cfg_flashOnFinish: flashOnFinish.checked
     property string cfg_density
@@ -23,22 +25,49 @@ KCM.SimpleKCM {
     property alias cfg_hooksHintDismissed: hooksHint.checked
 
     Kirigami.FormLayout {
+        QQC2.ComboBox {
+            Kirigami.FormData.label: i18n("Panel icon style:")
+            textRole: "text"
+            valueRole: "value"
+            model: [
+                {
+                    value: "pills",
+                    text: i18n("Icon with counters next to it")
+                },
+                {
+                    value: "badges",
+                    text: i18n("Icon with small badges")
+                }
+            ]
+            currentIndex: Math.max(0, indexOfValue(cfg_compactStyle))
+            onActivated: cfg_compactStyle = currentValue
+        }
+        QQC2.Label {
+            text: i18n("Vertical panels always use badges.")
+            font: Kirigami.Theme.smallFont
+            opacity: 0.7
+        }
         QQC2.CheckBox {
             id: showWorkingCount
-            Kirigami.FormData.label: i18n("Panel icon:")
-            text: i18n("Show the number of tasks in progress")
+            Kirigami.FormData.label: i18n("Show:")
+            text: i18n("Number of tasks in progress")
         }
         QQC2.CheckBox {
             id: showErrorDot
-            text: i18n("Show a dot when there are errors")
+            text: i18n("Errors")
         }
         QQC2.CheckBox {
-            id: showCountText
-            text: i18n("Show counts as text next to the icon (horizontal panels)")
+            id: glowOnAttention
+            Kirigami.FormData.label: i18n("Effects:")
+            text: i18n("Red halo while a session needs me")
         }
         QQC2.CheckBox {
             id: pulseOnAttention
             text: i18n("Pulse when a session needs me")
+        }
+        QQC2.CheckBox {
+            id: animateWorking
+            text: i18n("Spinning ring while tasks are in progress")
         }
         QQC2.CheckBox {
             id: flashOnFinish

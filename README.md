@@ -4,6 +4,10 @@
 failed, right from your Plasma panel or desktop.** Jump to the exact terminal tab of a session in one click,
 including Yakuake, Konsole and kitty.
 
+> **Made for Yakuake.** Click a session that needs you and Yakuake drops down **already on the tab where that
+> Claude session runs**, even if Yakuake was retracted and you were on another tab. No hunting through tabs.
+> See [Yakuake integration](#yakuake-integration).
+
 ![Desktop dashboard](docs/images/dashboard.png)
 
 <p align="center">
@@ -26,11 +30,13 @@ Klaude Monitor has two widgets that show the same data from one shared backgroun
 ## Features
 
 - 🔔 **Know when you're needed.** Sessions waiting for a permission, an answer (`AskUserQuestion`) or a plan approval
-  jump to the top, turn the panel icon red and send one desktop notification, showing **what** Claude is asking.
+  jump to the top, light up a pulsing red halo and a red counter on the panel icon, and send one desktop
+  notification showing **what** Claude is asking. Tasks in progress spin a ring around the icon.
 - ⚙️ **See what every session is doing.** Current tool (`Bash: npm test`, `Edit: src/app.ts`…), last result,
   Claude's own recap, the project, branch, model, terminal and how long it has been in its state.
-- 🎯 **Jump to the terminal.** Click a session to focus the terminal it runs in: the exact **Yakuake** tab (unfolding
-  Yakuake if it is retracted), the exact **Konsole** tab, the exact **kitty** tab/split, or any other terminal window.
+- ⬇️ **Yakuake: straight to the right tab.** Click a session (in the popup, the dashboard or the notification)
+  and Yakuake unfolds on the exact tab running it. [More below](#yakuake-integration).
+- 🎯 **Other terminals too.** The exact **Konsole** tab, the exact **kitty** tab/split, or any other terminal window.
   Ended sessions can be resumed (`claude --resume`) in your preferred terminal.
 - 🧭 **Honest states.** Each session is in exactly one state, with a certainty level. A session whose process
   vanished without reporting an exit is shown as **unknown**, never as completed.
@@ -40,6 +46,27 @@ Klaude Monitor has two widgets that show the same data from one shared backgroun
 - 👥 **Multiple accounts.** Sessions run with different `CLAUDE_CONFIG_DIR`s (e.g. personal and work) are detected
   automatically.
 - 🌍 English and Spanish.
+
+## Yakuake integration
+
+If you run Claude Code in [Yakuake](https://apps.kde.org/yakuake/), Klaude Monitor takes you to the right place in
+one click:
+
+1. A session needs you: the panel icon turns red and a notification tells you what Claude is asking.
+2. Click the session in the popup, its card in the dashboard, or **Open terminal** in the notification. Or
+   **middle-click** the panel icon to go to the session that has been waiting longest.
+3. Yakuake **drops down if it was retracted** and **switches to the tab where that session runs**, with the keyboard
+   focus there, ready for you to answer.
+
+It works with many Claude sessions open in different Yakuake tabs, including tabs created after the monitor
+started. The monitor finds the tab by walking up the session's process tree to the shell of each Yakuake tab (over
+Yakuake's own D-Bus interface), so nothing needs to be configured. Opening the terminal never marks the session as
+answered; only Claude Code itself does.
+
+Ended sessions can also be resumed in a **new Yakuake tab** (`claude --resume` in the project folder): choose
+Yakuake (or *Automatic*) under *Resume sessions in* in the Monitor settings.
+
+Konsole (exact tab) and kitty (exact tab or split) work the same way; see [Terminals and limitations](#terminals-and-limitations).
 
 ## How it works
 
@@ -130,8 +157,9 @@ Or step by step:
 
    ![Add Widgets with the two Klaude Monitor widgets](docs/images/add-widgets.png)
 
-3. **Panel:** drag **Klaude Monitor** onto a panel (horizontal or vertical). The icon shows a red badge with the
-   sessions that need you and a blue one with the tasks in progress:
+3. **Panel:** drag **Klaude Monitor** onto a panel (horizontal or vertical). Next to the icon, a red pill with a
+   bell counts the sessions that need you (with a pulsing red halo), a blue one the tasks in progress (with a
+   spinning ring) and an amber one the errors:
 
    ![Panel icon](docs/images/panel-icon.png)
 
@@ -170,8 +198,11 @@ These are three different things:
   <img src="docs/images/panel-es.png" alt="Panel popup in Spanish" width="45%">
 </p>
 
-- **Red badge**: sessions that need you. **Blue badge**: tasks in progress. **Amber dot**: errors to review.
-- The icon pulses when a session starts needing you and flashes green when a task finishes (configurable).
+- **Red pill with a bell** and a **pulsing red halo** around the icon: sessions that need you.
+- **Blue pill** and a **spinning ring** around the icon: tasks in progress. **Amber pill**: errors to review.
+- The icon bounces when a session starts needing you and flashes green when a task finishes.
+- Every effect can be turned off, and *Icon style* can switch to small corner badges for a more discreet look
+  (vertical panels always use badges, plus the halo and the ring).
 - **Click**: popup with the sessions grouped as *Needs your input*, *In progress*, *Errors*, *Recently completed*,
   *Unknown*, *Idle*. Each row shows the project, the task title, the state, for how long, and the question,
   tool, result or error.
@@ -259,7 +290,7 @@ Opening a session focuses the terminal it **already runs in**; the monitor never
 
 | Terminal | What happens |
 | --- | --- |
-| **Yakuake** | Raises the exact tab and unfolds Yakuake if it is retracted |
+| **Yakuake** | Unfolds Yakuake if it is retracted and switches to the exact tab ([details](#yakuake-integration)) |
 | **Konsole** | Selects the exact tab and activates its window |
 | **kitty** | Focuses the exact tab/split if remote control is enabled (`allow_remote_control socket-only` and `listen_on unix:@kitty-{kitty_pid}` in `kitty.conf`); otherwise activates the window |
 | Others (Alacritty, WezTerm, foot, GNOME Terminal, Ghostty…) | Activates the terminal window (not a specific tab) |

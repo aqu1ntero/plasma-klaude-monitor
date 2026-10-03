@@ -1,0 +1,882 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the plasma-klaude-monitor package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-klaude-monitor\n"
+"Report-Msgid-Bugs-To: https://github.com/aqu1ntero/plasma-klaude-monitor/"
+"issues\n"
+"POT-Creation-Date: 2026-10-03 13:08-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: plasmoids/desktop/contents/config/config.qml:7
+#: plasmoids/panel/contents/config/config.qml:7
+msgid "Appearance"
+msgstr ""
+
+#: plasmoids/desktop/contents/config/config.qml:12
+#: plasmoids/panel/contents/config/config.qml:12
+msgid "Monitor"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:29
+#: plasmoids/panel/contents/ui/configGeneral.qml:53
+msgid "Density:"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:35
+#: plasmoids/panel/contents/ui/configGeneral.qml:59
+msgid "Compact"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:39
+#: plasmoids/panel/contents/ui/configGeneral.qml:63
+msgid "Normal"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:43
+msgid "Comfortable"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:52
+msgid "Sections:"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:53
+msgid "Summary counters"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:57
+msgid "Pending interventions"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:61
+#: plasmoids/desktop/contents/ui/configGeneral.qml:70
+msgid "Session list"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:65
+msgid "Activity history"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:73
+#: plasmoids/panel/contents/ui/configGeneral.qml:70
+msgid "Default filter:"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:79
+#: plasmoids/panel/contents/ui/configGeneral.qml:76
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:127
+msgid "All"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:83
+#: plasmoids/desktop/contents/ui/Dashboard.qml:287
+#: plasmoids/panel/contents/ui/configGeneral.qml:80
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:131
+msgid "Active"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:87
+#: plasmoids/panel/contents/ui/configGeneral.qml:84 shared/qml/Labels.qml:13
+msgid "Needs you"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:91
+#: plasmoids/panel/contents/ui/configGeneral.qml:88 shared/qml/Labels.qml:15
+msgid "Working"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:95
+#: plasmoids/panel/contents/ui/configGeneral.qml:92 shared/qml/Labels.qml:21
+#: shared/qml/Labels.qml:191
+msgid "Error"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:102
+msgid "Default order:"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:108
+#: plasmoids/desktop/contents/ui/Dashboard.qml:332
+#: plasmoids/panel/contents/ui/configGeneral.qml:110
+msgid "Recent activity"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:112
+#: plasmoids/desktop/contents/ui/Dashboard.qml:336
+#: plasmoids/panel/contents/ui/configGeneral.qml:114
+msgid "Last state change"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:116
+#: plasmoids/desktop/contents/ui/Dashboard.qml:340
+#: plasmoids/panel/contents/ui/configGeneral.qml:118
+msgid "Project"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:120
+#: plasmoids/desktop/contents/ui/Dashboard.qml:344
+#: plasmoids/panel/contents/ui/configGeneral.qml:122
+msgid "State"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:128
+msgid "Group by state"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:131
+#: plasmoids/panel/contents/ui/configGeneral.qml:129
+msgid "Sessions waiting for you always stay on top."
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:137
+#: plasmoids/panel/contents/ui/configGeneral.qml:140
+msgid "Show:"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:138
+#: plasmoids/panel/contents/ui/configGeneral.qml:141
+msgid "Recently completed sessions"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:142
+#: plasmoids/panel/contents/ui/configGeneral.qml:145
+msgid "Idle sessions"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:146
+#: plasmoids/panel/contents/ui/configGeneral.qml:149
+msgid "Ended sessions"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:150
+msgid "Working directory"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:154
+msgid "Session identifier"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:158
+#: plasmoids/panel/contents/ui/configGeneral.qml:153
+msgid "Hidden projects:"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:159
+#: plasmoids/panel/contents/ui/configGeneral.qml:154
+msgid "comma-separated folder names"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:165
+#: plasmoids/desktop/contents/ui/Dashboard.qml:233
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:96
+#: shared/qml/MonitorConfigPage.qml:94
+msgid "History"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:169
+msgid "Entries shown:"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:175
+msgid "Events shown:"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:181
+#: shared/qml/HistoryView.qml:104
+msgid "Important"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:185
+#: shared/qml/HistoryView.qml:108
+msgid "Interventions"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:189
+#: plasmoids/desktop/contents/ui/Dashboard.qml:180
+#: shared/qml/HistoryView.qml:112 shared/qml/Labels.qml:38
+msgid "Errors"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:193
+#: shared/qml/HistoryView.qml:116
+msgid "Everything"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:200
+msgid ""
+"How long history is kept is set in the Monitor page (shared by both widgets)."
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:208
+msgid "Tips:"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/configGeneral.qml:209
+#: plasmoids/panel/contents/ui/configGeneral.qml:166
+msgid "Hide the tip about Claude Code hooks"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:117
+msgid "Claude Code sessions"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:131
+#: plasmoids/desktop/contents/ui/main.qml:60
+#: plasmoids/panel/contents/ui/main.qml:65
+msgid "Refresh"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:156
+msgid "Need you"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:160
+msgid "Sessions waiting for a permission, an answer or an approval"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:165 shared/qml/Labels.qml:34
+msgid "In progress"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:172 shared/qml/Labels.qml:17
+msgid "Completed"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:175
+msgid "Tasks finished in the last %1 minutes"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:184
+msgid "Plus %1 sessions in an unknown state"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:184
+msgid "Errors that need a review"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:189
+msgid "Last update"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:192
+msgid "hooks active"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:192
+msgid "no hooks (state files only)"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:192
+msgid "Monitor %1, %2"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:200
+msgid ""
+"The Klaude Monitor service is not installed. Run install.sh runtime from the "
+"project."
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:200
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:190
+msgid "Cannot reach the monitor service: %1"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:203
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:193
+msgid "Retry"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:213
+msgid ""
+"Install the Claude Code hooks to see exactly which question or permission "
+"each session waits for: klaude-monitor hooks install"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:233
+#: plasmoids/desktop/contents/ui/Dashboard.qml:416
+msgid "Pending (%1)"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:233
+#: plasmoids/desktop/contents/ui/Dashboard.qml:416
+msgid "Pending"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:233
+#: plasmoids/desktop/contents/ui/Dashboard.qml:265
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:92
+msgid "Sessions"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:283
+msgid "All states"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:322
+msgid "All projects"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:368
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:233
+msgid "No Claude Code sessions"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:368
+msgid "No sessions match the filters"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:438
+msgid "Nothing needs you right now."
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:473
+msgid "Activity"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/main.qml:25
+#: plasmoids/panel/contents/ui/main.qml:27
+msgid "Klaude Monitor"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/main.qml:26
+msgid "%1 session needs you"
+msgid_plural "%1 sessions need you"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plasmoids/desktop/contents/ui/main.qml:26
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:174
+msgid "%1 sessions"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/PendingItem.qml:49
+msgid "Error to review"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/PendingItem.qml:56
+msgid "%1 (%2)"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/PendingItem.qml:64
+msgid ""
+"Claude is waiting for you (install the hooks to see the exact question)."
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/PendingItem.qml:85
+#: shared/qml/SessionCard.qml:232
+msgid "Mark reviewed"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/PendingItem.qml:92
+#: shared/qml/SessionCard.qml:246 shared/qml/SessionRow.qml:133
+msgid "Open terminal"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/PendingItem.qml:94
+#: shared/qml/SessionCard.qml:31 shared/qml/SessionRow.qml:29
+msgid "Could not focus the terminal: %1"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:28
+msgid "Panel icon:"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:29
+msgid "Show the number of tasks in progress"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:33
+msgid "Show a dot when there are errors"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:37
+msgid "Show counts as text next to the icon (horizontal panels)"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:41
+msgid "Pulse when a session needs me"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:45
+msgid "Flash when a task finishes"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:50
+msgid "Popup"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:100
+msgid "Order:"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:101
+msgid "Group by priority"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:104
+msgid "Sort within groups by:"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:136
+msgid "Visibility"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/configGeneral.qml:159
+msgid "History entries:"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:92
+msgid "Sessions (%1 need you)"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:166
+msgid "Updated %1"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:190
+msgid ""
+"The Klaude Monitor service is not installed. Run install.sh runtime from the "
+"project, or install the klaude-monitor package."
+msgstr ""
+
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:205
+msgid ""
+"Tip: install the Claude Code hooks to see the exact question or permission "
+"each session waits for: klaude-monitor hooks install"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:233
+msgid "No sessions match the filter"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:234
+msgid "Sessions appear here as soon as Claude Code starts."
+msgstr ""
+
+#: plasmoids/panel/contents/ui/main.qml:30
+msgid "The monitor service is not installed"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/main.qml:30
+msgid "Connecting to the monitor…"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/main.qml:34
+msgid "%1 needs you"
+msgid_plural "%1 need you"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plasmoids/panel/contents/ui/main.qml:36
+msgid "%1 working"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/main.qml:38
+msgid "%1 recently completed"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/main.qml:40
+msgid "%1 error"
+msgid_plural "%1 errors"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plasmoids/panel/contents/ui/main.qml:42
+msgid "%1 unknown"
+msgstr ""
+
+#: plasmoids/panel/contents/ui/main.qml:43
+msgid "No active Claude sessions"
+msgstr ""
+
+#: shared/qml/HistoryView.qml:141
+msgid "History unavailable"
+msgstr ""
+
+#: shared/qml/HistoryView.qml:141
+msgid "No events yet"
+msgstr ""
+
+#: shared/qml/HistoryView.qml:166
+msgid ""
+"Happened: %1\n"
+"Detected: %2"
+msgstr ""
+
+#: shared/qml/HistoryView.qml:198
+msgid "detected %1 later"
+msgstr ""
+
+#: shared/qml/Labels.qml:19 shared/qml/Labels.qml:40
+msgid "Idle"
+msgstr ""
+
+#: shared/qml/Labels.qml:23 shared/qml/Labels.qml:42
+msgid "Ended"
+msgstr ""
+
+#: shared/qml/Labels.qml:25
+msgid "Unknown"
+msgstr ""
+
+#: shared/qml/Labels.qml:32
+msgid "Needs your input"
+msgstr ""
+
+#: shared/qml/Labels.qml:36
+msgid "Recently completed"
+msgstr ""
+
+#: shared/qml/Labels.qml:44
+msgid "Unknown state"
+msgstr ""
+
+#: shared/qml/Labels.qml:85
+msgctxt "certainty of a session state"
+msgid "certain"
+msgstr ""
+
+#: shared/qml/Labels.qml:87
+msgctxt "certainty of a session state"
+msgid "likely"
+msgstr ""
+
+#: shared/qml/Labels.qml:89
+msgctxt "certainty of a session state"
+msgid "uncertain"
+msgstr ""
+
+#: shared/qml/Labels.qml:95
+msgid "reported by a Claude Code hook"
+msgstr ""
+
+#: shared/qml/Labels.qml:96
+msgid "read from Claude Code's session state file"
+msgstr ""
+
+#: shared/qml/Labels.qml:97
+msgid "inferred from the transcript"
+msgstr ""
+
+#: shared/qml/Labels.qml:98
+msgid "recovered when the monitor started"
+msgstr ""
+
+#: shared/qml/Labels.qml:99
+msgid "inferred by the monitor"
+msgstr ""
+
+#: shared/qml/Labels.qml:101
+msgid "State %1: %2"
+msgstr ""
+
+#: shared/qml/Labels.qml:103
+msgid "No activity for a long time: it may be stuck."
+msgstr ""
+
+#: shared/qml/Labels.qml:111
+msgid "Permission"
+msgstr ""
+
+#: shared/qml/Labels.qml:113
+msgid "Question"
+msgstr ""
+
+#: shared/qml/Labels.qml:115
+msgid "Plan approval"
+msgstr ""
+
+#: shared/qml/Labels.qml:117 shared/qml/Labels.qml:185
+msgid "Input requested"
+msgstr ""
+
+#: shared/qml/Labels.qml:119
+msgid "Waiting for you"
+msgstr ""
+
+#: shared/qml/Labels.qml:134
+msgid "replaced by a new session in the same terminal"
+msgstr ""
+
+#: shared/qml/Labels.qml:136
+msgid "Claude Code's state file disappeared"
+msgstr ""
+
+#: shared/qml/Labels.qml:138
+msgid "the process ended without reporting it"
+msgstr ""
+
+#: shared/qml/Labels.qml:140
+msgid "cleared"
+msgstr ""
+
+#: shared/qml/Labels.qml:142
+msgid "logged out"
+msgstr ""
+
+#: shared/qml/Labels.qml:144
+msgid "exited"
+msgstr ""
+
+#: shared/qml/Labels.qml:171
+msgid "Session started"
+msgstr ""
+
+#: shared/qml/Labels.qml:173
+msgid "Session resumed"
+msgstr ""
+
+#: shared/qml/Labels.qml:175
+msgid "Session found running"
+msgstr ""
+
+#: shared/qml/Labels.qml:177
+msgid "Session ended"
+msgstr ""
+
+#: shared/qml/Labels.qml:179
+msgid "Session lost"
+msgstr ""
+
+#: shared/qml/Labels.qml:181
+msgid "Task started"
+msgstr ""
+
+#: shared/qml/Labels.qml:183
+msgid "Task finished"
+msgstr ""
+
+#: shared/qml/Labels.qml:187
+msgid "Input given"
+msgstr ""
+
+#: shared/qml/Labels.qml:189
+msgid "Permission denied"
+msgstr ""
+
+#: shared/qml/Labels.qml:193
+msgid "Error reviewed"
+msgstr ""
+
+#: shared/qml/Labels.qml:195
+msgid "Monitor started"
+msgstr ""
+
+#: shared/qml/Labels.qml:262
+msgctxt "time ago"
+msgid "now"
+msgstr ""
+
+#: shared/qml/Labels.qml:265
+msgctxt "time ago"
+msgid "%1 s"
+msgstr ""
+
+#: shared/qml/Labels.qml:269
+msgctxt "time ago"
+msgid "%1 min"
+msgstr ""
+
+#: shared/qml/Labels.qml:273
+msgctxt "time ago, hours and minutes"
+msgid "%1 h %2 min"
+msgstr ""
+
+#: shared/qml/Labels.qml:275
+msgctxt "time ago"
+msgid "%1 d"
+msgstr ""
+
+#: shared/qml/Labels.qml:284
+msgctxt "duration"
+msgid "%1 s"
+msgstr ""
+
+#: shared/qml/Labels.qml:288
+msgctxt "duration"
+msgid "%1 min"
+msgstr ""
+
+#: shared/qml/Labels.qml:290
+msgctxt "duration, hours and minutes"
+msgid "%1 h %2 min"
+msgstr ""
+
+#: shared/qml/Labels.qml:316
+msgid "background session"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:31
+msgid ""
+"Claude Code hooks are active: questions and permissions are reported exactly."
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:31
+msgid ""
+"No hook events received yet. Install the hooks for exact questions, "
+"permissions and errors: klaude-monitor hooks install"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:32
+msgid "Monitor %1 · %2 accounts · %3 sessions"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:70
+msgid "The monitor service is not reachable: %1"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:78
+msgid ""
+"These settings belong to the shared monitor service and apply to both "
+"widgets."
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:83
+msgid "Service:"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:87
+msgid "Hooks:"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:97
+msgid "Keep history for (days):"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:107
+msgid "Monitoring"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:110
+msgid "Re-check every (seconds) when no events arrive:"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:118
+msgid "Finished tasks count as recent for (minutes):"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:126
+msgid "Keep ended sessions listed for (minutes):"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:136
+msgid "Notifications"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:139
+msgid "Notify when:"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:140
+msgid "Claude needs my input"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:146
+msgid "A task finishes"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:152
+msgid "…only if it took at least (seconds):"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:160
+msgid "A session hits an error"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:166
+msgid "The monitor loses track of a session"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:174
+msgid "Terminal"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:178
+msgid "Resume sessions in:"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:185
+msgid "Automatic (original terminal, Yakuake, Konsole, kitty)"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:201
+msgid "Custom command"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:208
+msgid "Custom command:"
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:217
+msgid ""
+"{cwd} is the project folder and {cmd} the claude --resume command (both "
+"already quoted)."
+msgstr ""
+
+#: shared/qml/MonitorConfigPage.qml:224
+msgid "Opening a running session always focuses the terminal it runs in."
+msgstr ""
+
+#: shared/qml/SessionCard.qml:33 shared/qml/SessionRow.qml:31
+msgid "Opened a terminal to resume the session"
+msgstr ""
+
+#: shared/qml/SessionCard.qml:33 shared/qml/SessionRow.qml:31
+msgid "Could not resume: %1"
+msgstr ""
+
+#: shared/qml/SessionCard.qml:176
+msgid "activity %1"
+msgstr ""
+
+#: shared/qml/SessionCard.qml:182
+msgid "last event: %1"
+msgstr ""
+
+#: shared/qml/SessionCard.qml:215
+msgid "Session %1 (pid %2)"
+msgstr ""
+
+#: shared/qml/SessionCard.qml:239
+msgid "Dismiss"
+msgstr ""
+
+#: shared/qml/SessionCard.qml:246
+msgid "Resume"
+msgstr ""
+
+#: shared/qml/SessionRow.qml:33
+msgid "unknown"
+msgstr ""
+
+#: shared/qml/SessionRow.qml:33
+msgid "This session has no terminal that can be focused (%1)."
+msgstr ""
+
+#: shared/qml/SessionRow.qml:39
+msgid "Click to focus its terminal (%1)"
+msgstr ""
+
+#: shared/qml/SessionRow.qml:39
+msgid "Click to resume it in a new terminal"
+msgstr ""
+
+#: shared/qml/SessionRow.qml:123
+msgid "Mark error as reviewed"
+msgstr ""
+
+#: shared/qml/SessionRow.qml:133
+msgid "Resume in a new terminal"
+msgstr ""

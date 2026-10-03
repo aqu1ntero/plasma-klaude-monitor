@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+  <group name="General">
+    <entry name="density" type="String"><default>normal</default></entry>
+    <entry name="showKpis" type="Bool"><default>true</default></entry>
+    <entry name="showPending" type="Bool"><default>true</default></entry>
+    <entry name="showSessions" type="Bool"><default>true</default></entry>
+    <entry name="showHistory" type="Bool"><default>true</default></entry>
+    <entry name="defaultFilter" type="String"><default>all</default></entry>
+    <entry name="defaultSort" type="String"><default>activity</default></entry>
+    <entry name="groupByState" type="Bool"><default>false</default></entry>
+    <entry name="showCompleted" type="Bool"><default>true</default></entry>
+    <entry name="showIdle" type="Bool"><default>true</default></entry>
+    <entry name="showEnded" type="Bool"><default>true</default></entry>
+    <entry name="hiddenProjects" type="String"><default></default></entry>
+    <entry name="showCwd" type="Bool"><default>true</default></entry>
+    <entry name="showSessionId" type="Bool"><default>true</default></entry>
+    <entry name="historyLimit" type="Int"><default>150</default></entry>
+    <entry name="historyFilter" type="String"><default>important</default></entry>
+    <entry name="hooksHintDismissed" type="Bool"><default>false</default></entry>
+  </group>
+</kcfg>

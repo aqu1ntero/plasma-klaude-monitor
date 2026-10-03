@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Klaude Monitor
+Comment=Monitor of Claude Code sessions
+Comment[es]=Monitor de sesiones de Claude Code
+Icon=klaude-monitor
+Exec=klaude-monitor status
+Terminal=true
+NoDisplay=true

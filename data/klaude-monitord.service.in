@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Klaude Monitor daemon (systemd user unit). Installed by install.sh with @BINDIR@ substituted.
+[Unit]
+Description=Klaude Monitor - shared monitor of Claude Code sessions
+Documentation=https://github.com/aqu1ntero/plasma-klaude-monitor
+After=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=io.github.aqu1ntero.KlaudeMonitor
+ExecStart=@BINDIR@/klaude-monitord
+Environment=PATH=@BINDIR@:/usr/local/bin:/usr/bin:/bin
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target

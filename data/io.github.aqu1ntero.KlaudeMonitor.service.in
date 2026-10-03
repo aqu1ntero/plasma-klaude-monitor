@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=io.github.aqu1ntero.KlaudeMonitor
+Exec=@BINDIR@/klaude-monitord
+SystemdService=klaude-monitord.service

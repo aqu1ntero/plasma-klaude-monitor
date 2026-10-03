@@ -1,0 +1,40 @@
+#!/bin/sh
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Claude Code hook for Klaude Monitor.
+#
+# Drops the hook event (stdin JSON) into the monitor's spool directory as one file, prefixed by a
+# line of metadata: when it happened, the claude process and its config dir. The daemon picks it
+# up through inotify; if the daemon is stopped, the file waits for it. Plain sh, no python/jq, so
+# it adds ~2 ms to the hook. It never prints anything and always exits 0, so it never changes or
+# blocks what Claude Code does.
+
+spool="${XDG_STATE_HOME:-$HOME/.local/state}/klaude-monitor/spool"
+[ -d "$spool" ] || mkdir -p "$spool" 2>/dev/null || { cat >/dev/null; exit 0; }
+
+ts=$(date +%s%3N 2>/dev/null) || ts=0
+
+# Find the claude process this hook runs under.
+pid=0
+p=$PPID
+i=0
+while [ "${p:-0}" -gt 1 ] && [ "$i" -lt 8 ]; do
+  if [ "$(cat "/proc/$p/comm" 2>/dev/null)" = claude ]; then pid=$p; break; fi
+  stat=$(cat "/proc/$p/stat" 2>/dev/null) || break
+  stat=${stat##*) }
+  # shellcheck disable=SC2086
+  set -- $stat
+  p=$2
+  i=$((i + 1))
+done
+
+dir=${CLAUDE_CONFIG_DIR:-}
+case $dir in
+  *[\\\"]*) dir=$(printf '%s' "$dir" | sed 's/\\/\\\\/g; s/"/\\"/g') ;;
+esac
+
+tmp="$spool/.$ts-$$.tmp"
+{
+  printf '{"ts":%s,"pid":%s,"account":"%s"}\n' "$ts" "$pid" "$dir"
+  cat
+} >"$tmp" 2>/dev/null && mv -f "$tmp" "$spool/$ts-$$.json" 2>/dev/null
+exit 0

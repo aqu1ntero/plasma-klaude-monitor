@@ -1,0 +1,24 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "adrianquintero86@gmail.com",
+                "Name": "Adrian Quintero"
+            }
+        ],
+        "BugReportUrl": "https://github.com/aqu1ntero/plasma-klaude-monitor/issues",
+        "Category": "System Information",
+        "Description": "Claude Code sessions at a glance: who needs you, what is running, what failed",
+        "Description[es]": "Sesiones de Claude Code de un vistazo: cuáles te necesitan, cuáles trabajan y cuáles fallaron",
+        "EnabledByDefault": true,
+        "Icon": "klaude-monitor",
+        "Id": "io.github.aqu1ntero.klaudemonitor.panel",
+        "License": "GPL-2.0-or-later",
+        "Name": "Klaude Monitor",
+        "Name[es]": "Klaude Monitor",
+        "Version": "0.1.0",
+        "Website": "https://github.com/aqu1ntero/plasma-klaude-monitor"
+    },
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API-Minimum-Version": "6.0"
+}

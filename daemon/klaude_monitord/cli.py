@@ -140,6 +140,63 @@ def cmd_config(a):
     return 0
 
 
+def cmd_uninstall(a):
+    """Stop and remove the service and the hooks (what install.sh runtime / the widgets installed)."""
+    import subprocess
+    from . import config, hooks
+    from .service import DEFAULT_ACCOUNT
+    home = os.path.expanduser("~")
+    data = os.environ.get("XDG_DATA_HOME") or os.path.join(home, ".local", "share")
+    cfg_home = os.environ.get("XDG_CONFIG_HOME") or os.path.join(home, ".config")
+    bindir = os.path.dirname(os.path.realpath(sys.argv[0])) if sys.argv[0].endswith("klaude-monitor") else \
+        os.path.join(home, ".local", "bin")
+    dirs = set(_accounts_offline(DEFAULT_ACCOUNT))
+    for d in sorted(dirs):
+        try:
+            n = hooks.uninstall(d)
+            if n:
+                print(f"removed {n} hook entries from {d}/settings.json")
+        except (OSError, ValueError) as e:
+            print(f"{d}: {e}", file=sys.stderr)
+    if shutil.which("systemctl"):
+        subprocess.run(["systemctl", "--user", "disable", "--now", "klaude-monitord.service"],
+                       capture_output=True)
+    files = [
+        os.path.join(cfg_home, "systemd", "user", "klaude-monitord.service"),
+        os.path.join(data, "dbus-1", "services", f"{BUS_NAME}.service"),
+        os.path.join(data, "icons", "hicolor", "scalable", "apps", "klaude-monitor.svg"),
+        os.path.join(data, "applications", "klaude-monitor.desktop"),
+    ] + [os.path.join(bindir, n) for n in ("klaude-monitord", "klaude-monitor", "klaude-monitor-hook")]
+    for f in files:
+        try:
+            os.unlink(f)
+        except OSError:
+            pass
+    lib = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    if os.path.basename(lib) == "klaude-monitor":
+        shutil.rmtree(lib, ignore_errors=True)
+    if shutil.which("systemctl"):
+        subprocess.run(["systemctl", "--user", "daemon-reload"], capture_output=True)
+    if a.purge:
+        shutil.rmtree(config.STATE_DIR, ignore_errors=True)
+        shutil.rmtree(config.CONFIG_DIR, ignore_errors=True)
+        print("removed the service, its history and its settings")
+    else:
+        print(f"removed the service (history kept in {config.STATE_DIR}; use --purge to delete it)")
+    print("The widgets stay installed; remove them from Plasma if you no longer want them.")
+    return 0
+
+
+def _accounts_offline(default):
+    """Config dirs to clean: the default one plus those the service remembered."""
+    dirs = {default}
+    try:
+        dirs.update(a["dir"] for a in json.loads(_call("GetState", timeout=3000)).get("accounts", []))
+    except Exception:
+        pass
+    return [d for d in dirs if os.path.isdir(d)]
+
+
 def cmd_doctor(_a):
     ok = True
 
@@ -183,12 +240,14 @@ def main(argv=None):
     c = sub.add_parser("config", help="show or change the shared configuration")
     c.add_argument("set", nargs="*", metavar="KEY=VALUE")
     sub.add_parser("doctor", help="check the installation")
+    u = sub.add_parser("uninstall", help="stop and remove the service and the Claude Code hooks")
+    u.add_argument("--purge", action="store_true", help="also delete the history and settings")
     a = p.parse_args(argv)
     if a.cmd == "daemon":
         from .service import main as daemon_main
         return daemon_main()
     handlers = {"status": cmd_status, "history": cmd_history, "focus": cmd_focus, "forget": cmd_forget, "hooks": cmd_hooks,
-                "config": cmd_config, "doctor": cmd_doctor}
+                "config": cmd_config, "doctor": cmd_doctor, "uninstall": cmd_uninstall}
     if a.cmd not in handlers:
         p.print_help()
         return 2

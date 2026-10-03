@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-klaude-monitor\n"
 "Report-Msgid-Bugs-To: https://github.com/aqu1ntero/plasma-klaude-monitor/"
 "issues\n"
-"POT-Creation-Date: 2026-10-03 13:29-0400\n"
+"POT-Creation-Date: 2026-10-03 13:50-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,14 +76,14 @@ msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:79
 #: plasmoids/panel/contents/ui/configGeneral.qml:76
-#: plasmoids/panel/contents/ui/FullRepresentation.qml:127
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:131
 msgid "All"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:83
-#: plasmoids/desktop/contents/ui/Dashboard.qml:287
+#: plasmoids/desktop/contents/ui/Dashboard.qml:324
 #: plasmoids/panel/contents/ui/configGeneral.qml:80
-#: plasmoids/panel/contents/ui/FullRepresentation.qml:131
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:135
 msgid "Active"
 msgstr ""
 
@@ -108,25 +108,25 @@ msgid "Default order:"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:108
-#: plasmoids/desktop/contents/ui/Dashboard.qml:332
+#: plasmoids/desktop/contents/ui/Dashboard.qml:369
 #: plasmoids/panel/contents/ui/configGeneral.qml:110
 msgid "Recent activity"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:112
-#: plasmoids/desktop/contents/ui/Dashboard.qml:336
+#: plasmoids/desktop/contents/ui/Dashboard.qml:373
 #: plasmoids/panel/contents/ui/configGeneral.qml:114
 msgid "Last state change"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:116
-#: plasmoids/desktop/contents/ui/Dashboard.qml:340
+#: plasmoids/desktop/contents/ui/Dashboard.qml:377
 #: plasmoids/panel/contents/ui/configGeneral.qml:118
 msgid "Project"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:120
-#: plasmoids/desktop/contents/ui/Dashboard.qml:344
+#: plasmoids/desktop/contents/ui/Dashboard.qml:381
 #: plasmoids/panel/contents/ui/configGeneral.qml:122
 msgid "State"
 msgstr ""
@@ -179,8 +179,8 @@ msgid "comma-separated folder names"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:165
-#: plasmoids/desktop/contents/ui/Dashboard.qml:233
-#: plasmoids/panel/contents/ui/FullRepresentation.qml:96
+#: plasmoids/desktop/contents/ui/Dashboard.qml:269
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:100
 #: shared/qml/MonitorConfigPage.qml:94
 msgid "History"
 msgstr ""
@@ -204,7 +204,7 @@ msgid "Interventions"
 msgstr ""
 
 #: plasmoids/desktop/contents/ui/configGeneral.qml:189
-#: plasmoids/desktop/contents/ui/Dashboard.qml:180
+#: plasmoids/desktop/contents/ui/Dashboard.qml:182
 #: shared/qml/HistoryView.qml:112 shared/qml/Labels.qml:38
 msgid "Errors"
 msgstr ""
@@ -228,120 +228,124 @@ msgstr ""
 msgid "Hide the tip about Claude Code hooks"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:117
+#: plasmoids/desktop/contents/ui/Dashboard.qml:119
 msgid "Claude Code sessions"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:131
+#: plasmoids/desktop/contents/ui/Dashboard.qml:133
 #: plasmoids/desktop/contents/ui/main.qml:60
 #: plasmoids/panel/contents/ui/main.qml:65
 msgid "Refresh"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:156
+#: plasmoids/desktop/contents/ui/Dashboard.qml:158
 msgid "Need you"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:160
+#: plasmoids/desktop/contents/ui/Dashboard.qml:162
 msgid "Sessions waiting for a permission, an answer or an approval"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:165 shared/qml/Labels.qml:34
+#: plasmoids/desktop/contents/ui/Dashboard.qml:167 shared/qml/Labels.qml:34
 msgid "In progress"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:172 shared/qml/Labels.qml:17
+#: plasmoids/desktop/contents/ui/Dashboard.qml:174 shared/qml/Labels.qml:17
 msgid "Completed"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:175
+#: plasmoids/desktop/contents/ui/Dashboard.qml:177
 msgid "Tasks finished in the last %1 minutes"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:184
+#: plasmoids/desktop/contents/ui/Dashboard.qml:186
 msgid "Plus %1 sessions in an unknown state"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:184
+#: plasmoids/desktop/contents/ui/Dashboard.qml:186
 msgid "Errors that need a review"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:189
+#: plasmoids/desktop/contents/ui/Dashboard.qml:191
 msgid "Last update"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:192
+#: plasmoids/desktop/contents/ui/Dashboard.qml:194
 msgid "hooks active"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:192
+#: plasmoids/desktop/contents/ui/Dashboard.qml:194
 msgid "no hooks (state files only)"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:192
+#: plasmoids/desktop/contents/ui/Dashboard.qml:194
 msgid "Monitor %1, %2"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:200
-msgid ""
-"The Klaude Monitor service is not installed. Run install.sh runtime from the "
-"project."
-msgstr ""
-
-#: plasmoids/desktop/contents/ui/Dashboard.qml:200
-#: plasmoids/panel/contents/ui/FullRepresentation.qml:190
+#: plasmoids/desktop/contents/ui/Dashboard.qml:202
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:194
 msgid "Cannot reach the monitor service: %1"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:203
-#: plasmoids/panel/contents/ui/FullRepresentation.qml:193
+#: plasmoids/desktop/contents/ui/Dashboard.qml:205
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:197
 msgid "Retry"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:213
+#: plasmoids/desktop/contents/ui/Dashboard.qml:215
 msgid ""
 "Install the Claude Code hooks to see exactly which question or permission "
 "each session waits for: klaude-monitor hooks install"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:233
-#: plasmoids/desktop/contents/ui/Dashboard.qml:416
+#: plasmoids/desktop/contents/ui/Dashboard.qml:226
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:209
+msgid "This widget includes a newer version of the monitor service."
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:229
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:212
+msgid "Update…"
+msgstr ""
+
+#: plasmoids/desktop/contents/ui/Dashboard.qml:269
+#: plasmoids/desktop/contents/ui/Dashboard.qml:453
 msgid "Pending (%1)"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:233
-#: plasmoids/desktop/contents/ui/Dashboard.qml:416
+#: plasmoids/desktop/contents/ui/Dashboard.qml:269
+#: plasmoids/desktop/contents/ui/Dashboard.qml:453
 msgid "Pending"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:233
-#: plasmoids/desktop/contents/ui/Dashboard.qml:265
-#: plasmoids/panel/contents/ui/FullRepresentation.qml:92
+#: plasmoids/desktop/contents/ui/Dashboard.qml:269
+#: plasmoids/desktop/contents/ui/Dashboard.qml:302
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:96
 msgid "Sessions"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:283
+#: plasmoids/desktop/contents/ui/Dashboard.qml:320
 msgid "All states"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:322
+#: plasmoids/desktop/contents/ui/Dashboard.qml:359
 msgid "All projects"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:368
-#: plasmoids/panel/contents/ui/FullRepresentation.qml:233
+#: plasmoids/desktop/contents/ui/Dashboard.qml:405
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:273
 msgid "No Claude Code sessions"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:368
+#: plasmoids/desktop/contents/ui/Dashboard.qml:405
 msgid "No sessions match the filters"
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:438
+#: plasmoids/desktop/contents/ui/Dashboard.qml:475
 msgid "Nothing needs you right now."
 msgstr ""
 
-#: plasmoids/desktop/contents/ui/Dashboard.qml:473
+#: plasmoids/desktop/contents/ui/Dashboard.qml:510
 msgid "Activity"
 msgstr ""
 
@@ -357,7 +361,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: plasmoids/desktop/contents/ui/main.qml:26
-#: plasmoids/panel/contents/ui/FullRepresentation.qml:174
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:178
 msgid "%1 sessions"
 msgstr ""
 
@@ -437,36 +441,30 @@ msgstr ""
 msgid "History entries:"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/FullRepresentation.qml:92
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:96
 msgid "Sessions (%1 need you)"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/FullRepresentation.qml:166
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:170
 msgid "Updated %1"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/FullRepresentation.qml:190
-msgid ""
-"The Klaude Monitor service is not installed. Run install.sh runtime from the "
-"project, or install the klaude-monitor package."
-msgstr ""
-
-#: plasmoids/panel/contents/ui/FullRepresentation.qml:205
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:244
 msgid ""
 "Tip: install the Claude Code hooks to see the exact question or permission "
 "each session waits for: klaude-monitor hooks install"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/FullRepresentation.qml:233
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:273
 msgid "No sessions match the filter"
 msgstr ""
 
-#: plasmoids/panel/contents/ui/FullRepresentation.qml:234
+#: plasmoids/panel/contents/ui/FullRepresentation.qml:274
 msgid "Sessions appear here as soon as Claude Code starts."
 msgstr ""
 
 #: plasmoids/panel/contents/ui/main.qml:30
-msgid "The monitor service is not installed"
+msgid "The monitor service is not installed yet: click to set it up"
 msgstr ""
 
 #: plasmoids/panel/contents/ui/main.qml:30
@@ -839,6 +837,96 @@ msgstr ""
 
 #: shared/qml/MonitorConfigPage.qml:224
 msgid "Opening a running session always focuses the terminal it runs in."
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:107
+msgid "Update the Klaude Monitor service"
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:107
+msgid "Set up the Klaude Monitor service"
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:112
+msgid ""
+"This widget includes version %1 of the background service, but version %2 is "
+"running. Updating replaces the service files and restarts it. Your history "
+"and settings are kept."
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:112
+msgid ""
+"Klaude Monitor gets its data from a small background service that watches "
+"the Claude Code sessions on this computer. Both Klaude Monitor widgets share "
+"it. It is not installed yet."
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:119
+msgid "What this will do:"
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:124
+msgid ""
+"Copy the service to <tt>~/.local/lib/klaude-monitor</tt> and the commands "
+"<tt>klaude-monitor</tt>, <tt>klaude-monitord</tt> and <tt>klaude-monitor-"
+"hook</tt> to <tt>~/.local/bin</tt>."
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:125
+msgid ""
+"Register it as a user service that starts when you log in (systemd), and on "
+"D-Bus so the widgets can reach it."
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:126
+msgid "Start it now."
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:127
+msgid ""
+"Everything stays in your home folder: no administrator password is needed "
+"and nothing is sent over the network."
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:152
+msgid "Also add the Claude Code hooks (recommended)"
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:162
+msgid ""
+"Adds entries to <tt>~/.claude/settings.json</tt> (and to other Claude config "
+"folders in use) so Claude Code reports the exact question, permission or "
+"error a session is waiting on. The file is backed up first as "
+"<tt>settings.json.klaude-monitor.bak</tt>. Undo with <tt>klaude-monitor "
+"hooks uninstall</tt>."
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:172
+msgid "Update service"
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:172
+msgid "Install service"
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:184
+msgid "Installing…"
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:193
+msgid "The installation failed. Details below."
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:193
+msgid ""
+"Service installed and running. It may take a few seconds to show your "
+"sessions."
+msgstr ""
+
+#: shared/qml/ServiceSetup.qml:213
+msgid ""
+"Requires Python 3 with PyGObject, preinstalled on most KDE systems. To "
+"remove the service later, run <tt>klaude-monitor uninstall</tt>."
 msgstr ""
 
 #: shared/qml/SessionCard.qml:33 shared/qml/SessionRow.qml:31

@@ -88,6 +88,21 @@ No root access is needed: everything is installed for your user, under `~/.local
 
 ## Install
 
+### From the KDE Store (simplest)
+
+1. Right-click the panel or the desktop → **Add Widgets…** → **Get New Widgets…** → **Download New Plasma
+   Widgets…**, search **Klaude Monitor** and install the panel widget, the dashboard, or both.
+2. Add the widget. The first time, it explains what the background service is and exactly what installing it
+   will change, and offers to install it with one button (optionally with the Claude Code hooks):
+
+   ![The widget offers to install the service](docs/images/service-setup.png)
+
+   The service is bundled inside each widget, so nothing else is downloaded. No administrator password is
+   needed; everything goes into your home folder. If a widget update brings a newer service, the widget offers
+   to update it the same way.
+
+### From the source
+
 ```sh
 git clone https://github.com/aqu1ntero/plasma-klaude-monitor
 cd plasma-klaude-monitor
@@ -132,14 +147,14 @@ These are three different things:
 
 | Component | Install | Activate | Remove |
 | --- | --- | --- | --- |
-| **Service** (`klaude-monitord`) | `./install.sh runtime` | Automatic: enabled at login, also started on demand by D-Bus | `./install.sh uninstall-runtime` (stops it and removes the hooks; add `--purge` to delete history and settings) |
+| **Service** (`klaude-monitord`) | `./install.sh runtime`, or the **Install service** button in a widget | Automatic: enabled at login, also started on demand by D-Bus | `klaude-monitor uninstall` or `./install.sh uninstall-runtime` (stops it and removes the hooks; add `--purge` to delete history and settings) |
 | **Hooks** | `./install.sh hooks` | Immediately, for new Claude Code events | `klaude-monitor hooks uninstall` |
 | **Panel widget** | `./install.sh panel` | *Add Widgets…* → *Klaude Monitor* → drag to a panel | Remove it from the panel (only that instance), or `./install.sh uninstall-panel` (the package) |
 | **Desktop widget** | `./install.sh desktop` | *Add Widgets…* → *Klaude Monitor Dashboard* → drag to the desktop | Remove it from the desktop, or `./install.sh uninstall-desktop` |
 
 - You can install **only the panel widget** or **only the desktop widget**; each needs only the service.
 - Removing a widget (from the panel or the system) **never stops the service**: the other widget keeps working.
-- Installing a widget without the service shows *"service not installed"* inside the widget.
+- A widget installed without the service shows what the service is and an **Install service** button.
 - After upgrading a widget that is already on screen, restart Plasma (`systemctl --user restart plasma-plasmashell`)
   or re-add the widget to load the new version. Your history is not affected.
 - `./install.sh hooks` edits `settings.json` in every Claude config dir it knows about, keeps a backup next to it
@@ -219,6 +234,7 @@ klaude-monitor hooks install|uninstall|status [--config-dir DIR]
 klaude-monitor config [key=value …]
 klaude-monitor forget <id-prefix>
 klaude-monitor doctor
+klaude-monitor uninstall [--purge]   # remove the service and the hooks (and the history with --purge)
 ```
 
 ## Hooks: with and without
@@ -279,6 +295,17 @@ Run the daemon from the source tree with `PYTHONPATH=daemon python3 -m klaude_mo
 one first: `systemctl --user stop klaude-monitord`). Logs: `journalctl --user -u klaude-monitord -f`.
 
 The QML shared by both widgets lives in `shared/qml/` and is copied into each package by `tools/build.sh`.
+
+## Publishing a release
+
+1. Bump `__version__` in `daemon/klaude_monitord/__init__.py` and `"Version"` in both `plasmoids/*/metadata.json`.
+2. `tools/build.sh` creates `build/io.github.aqu1ntero.klaudemonitor.panel.plasmoid` and
+   `build/io.github.aqu1ntero.klaudemonitor.desktop.plasmoid`. Each one bundles the service (`contents/runtime`)
+   and the translations.
+3. Upload each `.plasmoid` to its product on [store.kde.org](https://store.kde.org) (Plasma 6 widgets), and attach
+   them to the GitHub release.
+
+The widgets compare the bundled service version with the running one and offer the update themselves.
 
 ## Credits
 

@@ -23,6 +23,10 @@ PlasmaExtras.Representation {
     property string searchText: ""
     property string feedbackText: ""
     property bool feedbackOk: true
+    // The service setup card replaces the session list when the service is missing (or on request,
+    // when a newer bundled version can be installed).
+    property bool showSetup: false
+    readonly property bool setupVisible: setupCard.mode === "install" || (showSetup && setupCard.needed)
 
     Layout.minimumWidth: Kirigami.Units.gridUnit * 18
     Layout.minimumHeight: Kirigami.Units.gridUnit * 14
@@ -109,7 +113,7 @@ PlasmaExtras.Representation {
 
             RowLayout {
                 Layout.fillWidth: true
-                visible: tabs.currentIndex === 0
+                visible: tabs.currentIndex === 0 && !full.setupVisible
                 spacing: Kirigami.Units.smallSpacing
 
                 PlasmaExtras.SearchField {
@@ -185,9 +189,9 @@ PlasmaExtras.Representation {
         Kirigami.InlineMessage {
             Layout.fillWidth: true
             Layout.margins: Kirigami.Units.smallSpacing
-            visible: !full.client.connected && full.client.failures > 0
-            type: full.client.notInstalled ? Kirigami.MessageType.Error : Kirigami.MessageType.Warning
-            text: full.client.notInstalled ? i18n("The Klaude Monitor service is not installed. Run install.sh runtime from the project, or install the klaude-monitor package.") : i18n("Cannot reach the monitor service: %1", full.client.errorText)
+            visible: !full.client.connected && full.client.failures > 0 && !full.client.notInstalled
+            type: Kirigami.MessageType.Warning
+            text: i18n("Cannot reach the monitor service: %1", full.client.errorText)
             actions: [
                 Kirigami.Action {
                     text: i18n("Retry")
@@ -195,6 +199,41 @@ PlasmaExtras.Representation {
                     onTriggered: full.client.refresh()
                 }
             ]
+        }
+
+        Kirigami.InlineMessage {
+            Layout.fillWidth: true
+            Layout.margins: Kirigami.Units.smallSpacing
+            visible: setupCard.mode === "update" && !full.showSetup
+            type: Kirigami.MessageType.Information
+            text: i18n("This widget includes a newer version of the monitor service.")
+            actions: [
+                Kirigami.Action {
+                    text: i18n("Update…")
+                    icon.name: "update-none"
+                    onTriggered: full.showSetup = true
+                }
+            ]
+        }
+
+        PlasmaComponents3.ScrollView {
+            id: setupScroll
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            visible: full.setupVisible
+            PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
+
+            contentItem: Flickable {
+                contentHeight: setupCard.implicitHeight + Kirigami.Units.largeSpacing * 2
+                clip: true
+                ServiceSetup {
+                    id: setupCard
+                    x: Kirigami.Units.largeSpacing
+                    y: Kirigami.Units.largeSpacing
+                    width: setupScroll.availableWidth - Kirigami.Units.largeSpacing * 2
+                    client: full.client
+                }
+            }
         }
 
         Kirigami.InlineMessage {
@@ -212,6 +251,7 @@ PlasmaExtras.Representation {
         StackLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
+            visible: !full.setupVisible
             currentIndex: tabs.currentIndex
 
             PlasmaComponents3.ScrollView {

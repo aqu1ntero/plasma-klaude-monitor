@@ -27,7 +27,7 @@ PlasmoidItem {
     toolTipMainText: i18n("Klaude Monitor")
     toolTipSubText: {
         if (!monitor.connected) {
-            return monitor.notInstalled ? i18n("The monitor service is not installed") : i18n("Connecting to the monitor…");
+            return monitor.notInstalled ? i18n("The monitor service is not installed yet: click to set it up") : i18n("Connecting to the monitor…");
         }
         const parts = [];
         if (needs > 0)

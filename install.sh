@@ -29,8 +29,13 @@ BUS=io.github.aqu1ntero.KlaudeMonitor
 PANEL_ID=io.github.aqu1ntero.klaudemonitor.panel
 DESKTOP_ID=io.github.aqu1ntero.klaudemonitor.desktop
 
-say() { printf '\033[1m==>\033[0m %s\n' "$*"; }
-warn() { printf '\033[33m!!\033[0m %s\n' "$*" >&2; }
+if [ -t 1 ]; then
+  say() { printf '\033[1m==>\033[0m %s\n' "$*"; }
+  warn() { printf '\033[33m!!\033[0m %s\n' "$*" >&2; }
+else  # plain output when run from a widget
+  say() { printf '==> %s\n' "$*"; }
+  warn() { printf '!! %s\n' "$*" >&2; }
+fi
 
 python_bin() {
   # The daemon needs PyGObject (gi): prefer the system python, which ships it.

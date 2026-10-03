@@ -23,6 +23,8 @@ Item {
     property string searchText: ""
     property string feedbackText: ""
     property bool feedbackOk: true
+    property bool showSetup: false
+    readonly property bool setupVisible: setupCard.mode === "install" || (showSetup && setupCard.needed)
 
     readonly property bool wide: width >= Kirigami.Units.gridUnit * 38
     readonly property var sections: {
@@ -146,7 +148,7 @@ Item {
         // ---- KPIs --------------------------------------------------------------------------
         GridLayout {
             Layout.fillWidth: true
-            visible: dash.cfg.showKpis
+            visible: dash.cfg.showKpis && !dash.setupVisible
             columns: dash.width < Kirigami.Units.gridUnit * 24 ? 3 : 5
             rowSpacing: Kirigami.Units.smallSpacing
             columnSpacing: Kirigami.Units.smallSpacing
@@ -195,9 +197,9 @@ Item {
 
         Kirigami.InlineMessage {
             Layout.fillWidth: true
-            visible: !dash.client.connected && dash.client.failures > 0
-            type: dash.client.notInstalled ? Kirigami.MessageType.Error : Kirigami.MessageType.Warning
-            text: dash.client.notInstalled ? i18n("The Klaude Monitor service is not installed. Run install.sh runtime from the project.") : i18n("Cannot reach the monitor service: %1", dash.client.errorText)
+            visible: !dash.client.connected && dash.client.failures > 0 && !dash.client.notInstalled
+            type: Kirigami.MessageType.Warning
+            text: i18n("Cannot reach the monitor service: %1", dash.client.errorText)
             actions: [
                 Kirigami.Action {
                     text: i18n("Retry")
@@ -217,11 +219,45 @@ Item {
             }
         }
 
+        Kirigami.InlineMessage {
+            Layout.fillWidth: true
+            visible: setupCard.mode === "update" && !dash.showSetup
+            type: Kirigami.MessageType.Information
+            text: i18n("This widget includes a newer version of the monitor service.")
+            actions: [
+                Kirigami.Action {
+                    text: i18n("Update…")
+                    icon.name: "update-none"
+                    onTriggered: dash.showSetup = true
+                }
+            ]
+        }
+
+        PlasmaComponents3.ScrollView {
+            id: setupScroll
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            visible: dash.setupVisible
+            PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
+
+            contentItem: Flickable {
+                contentHeight: setupCard.implicitHeight + Kirigami.Units.largeSpacing * 2
+                clip: true
+                ServiceSetup {
+                    id: setupCard
+                    x: Math.max(Kirigami.Units.largeSpacing, (setupScroll.availableWidth - width) / 2)
+                    y: Kirigami.Units.largeSpacing
+                    width: Math.min(setupScroll.availableWidth - Kirigami.Units.largeSpacing * 2, Kirigami.Units.gridUnit * 36)
+                    client: dash.client
+                }
+            }
+        }
+
         // ---- tabs (narrow layout) ----------------------------------------------------------
         PlasmaComponents3.TabBar {
             id: tabBar
             Layout.fillWidth: true
-            visible: !dash.wide && dash.sections.length > 1
+            visible: !dash.wide && dash.sections.length > 1 && !dash.setupVisible
             currentIndex: Math.max(0, dash.sections.indexOf(dash.currentTab))
             onCurrentIndexChanged: if (currentIndex >= 0 && currentIndex < dash.sections.length) {
                 dash.currentTab = dash.sections[currentIndex];
@@ -239,6 +275,7 @@ Item {
         GridLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
+            visible: !dash.setupVisible
             columns: dash.wide ? 2 : 1
             rowSpacing: Kirigami.Units.largeSpacing
             columnSpacing: Kirigami.Units.largeSpacing

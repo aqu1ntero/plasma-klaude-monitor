@@ -94,6 +94,11 @@ but cannot subscribe to signals, and the widgets are pure QML (no compiled plugi
 
 ## Process model and lifecycle
 
+- Each widget package bundles the service under `contents/runtime/` (same layout as the repository, added by
+  `tools/build.sh`) and its version in `contents/ui/shared/RuntimeInfo.js`. `ServiceSetup.qml` shows when the
+  service is missing (D-Bus `ServiceUnknown`) or older than the bundled one; after the user confirms, it runs
+  `contents/runtime/install.sh runtime [--hooks]` through the Plasma `executable` data engine.
+
 - `klaude-monitord.service` (systemd user unit, `Type=dbus`, `Restart=on-failure`) is enabled at login.
 - `~/.local/share/dbus-1/services/io.github.aqu1ntero.KlaudeMonitor.service` (`SystemdService=`) lets D-Bus start
   it on the first call if it is not running.

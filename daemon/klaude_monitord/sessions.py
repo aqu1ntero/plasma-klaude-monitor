@@ -209,6 +209,9 @@ class Manager:
         s.source = source
         s.since = when
         detail = dict(detail or {})
+        if prev in (NEEDS_INPUT, ERROR):
+            # What the notification asked for is no longer pending: withdraw it.
+            self.notify("dismiss", s, None)
 
         if state == NEEDS_INPUT:
             s.waiting = {"kind": detail.get("kind", "input"), "text": detail.get("text"),

@@ -365,7 +365,12 @@ class Monitor:
 
     # ---- notifications -----------------------------------------------------------------------
     def _notify(self, kind, session, detail):
-        if self.manager.quiet or not self.notifier:
+        if not self.notifier:
+            return
+        if kind == "dismiss":
+            self.notifier.close(session.id)
+            return
+        if self.manager.quiet:
             return
         self.notifier.send(kind, session, detail, self.cfg)
 

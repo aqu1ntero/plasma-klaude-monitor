@@ -101,6 +101,15 @@ class Notifier:
 
         self.bus.call(SERVICE, PATH, SERVICE, "Notify", params, None, Gio.DBusCallFlags.NONE, 5000, None, done)
 
+    def close(self, session_id):
+        """Withdraw the notification shown for a session, if any."""
+        nid = self.by_session.pop(session_id, None)
+        if nid is None:
+            return
+        self.ids.pop(nid, None)
+        self.bus.call(SERVICE, PATH, SERVICE, "CloseNotification", GLib.Variant("(u)", (nid,)), None,
+                      Gio.DBusCallFlags.NONE, 5000, None, None)
+
     def _on_action(self, _bus, _sender, _path, _iface, _signal, params, _data):
         nid, action = params.unpack()
         sid = self.ids.get(nid)

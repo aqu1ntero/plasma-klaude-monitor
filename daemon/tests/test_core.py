@@ -72,7 +72,13 @@ class StateMachine(Base):
         self.feed("idle")
         self.assertEqual(s.state, "completed")
         self.assertEqual(self.kinds(), ["session_start", "task_start", "needs_input", "input_resolved", "task_end"])
-        self.assertEqual(self.notes, ["needs_input", "completed"])
+        self.assertEqual([n for n in self.notes if n != "dismiss"], ["needs_input", "completed"])
+
+    def test_notification_withdrawn_when_answered(self):
+        self.feed("busy")
+        self.feed("waiting", waiting="permission")
+        self.feed("busy")
+        self.assertEqual(self.notes, ["needs_input", "dismiss"])
 
     def test_short_task_not_notified(self):
         self.feed("busy")
